@@ -1,16 +1,2 @@
-// async function fetchData() {
-//     const API_KEY = "e1039b3fe7762e9d6738cbdc81e0a6bb";
-//     const URL_API = `https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=${API_KEY}`;
-
-//     try {
-//         const response = await fetch(URL_API);
-//         const data = await response.json();
-//         console.log(data); // Affiche les données
-//     } catch (error) {
-//         console.error("Erreur :", error);
-//     }
-// }
-
-// fetchData();
-
 .node_modules
+.env

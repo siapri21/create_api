@@ -2,10 +2,9 @@ const express = require("express");
 const axios = require("axios");
 const app = express();
 
-const API_KEY = "e1039b3fe7762e9d6738cbdc81e0a6bb"; // Remplacez par votre clé API OpenWeatherMap
 
-app.get("/weather", async (req, res) => {
-    const city = req.query.city; // La ville est passée en paramètre
+app.get("ather", async (req, res) => {
+    const city = req.query.city;
     if (!city) {
         return res.status(400).send("Le paramètre 'city' est requis.");
     }
