@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "create_api",
+=======
+  "name": "tp_group",
+>>>>>>> e3f568b31dfb6848d367dac369e2cc74a5a57134
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
