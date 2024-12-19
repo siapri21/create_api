@@ -1,23 +1,19 @@
-import axios from 'axios';
-import 'dotenv/config';
-
-const API_KEY = process.env.API_KEY;
-const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
+import { weatherServices } from "../services/weatherServices.js";
 
 export default async function getWeather(req, res) {
+    // console.log("OK")
     const city = req.query.city;
     if (!city) {
-        return res.status(400).send("veuillez saisie le nom de la ville requis ");
+        return res.status(400).send("Veuillez saisir le nom de la ville requis");
     }
     try {
-        //const response = await axios.get(API_KEY);
-        //get data
-        res.json(response.data);
+        const weatherData = await weatherServices(city);
+        res.json(weatherData);
     } catch (error) {
         if (error.response && error.response.status === 404) {
             res.status(404).send("La ville saisie est introuvable");
         } else {
-            res.status(500).send("problème  rencontre sur l'API");
+            res.status(500).send("Problème rencontré sur l'API");
         }
     }
-};
+}

@@ -17,4 +17,4 @@
 // // Démarrage du serveur sur le port 3000
 // app.listen(3000, () => console.log("Server running on http://localhost:3000/external-data"));
 
-https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric
+https//api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric

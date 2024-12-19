@@ -1,8 +1,9 @@
 import express from 'express';
-import weatherController from '../controllers/weatherController';
+import getWeather from  '../controllers/weatherController.js'
 
-const publicRoute = express.Router();
+const router = express.Router();
 
-router.get("/weather", weatherController.getWeather);
+router.get("/weather", getWeather);
 
-export default publicRoute
+
+export default router
