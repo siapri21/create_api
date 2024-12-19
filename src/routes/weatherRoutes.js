@@ -1,8 +1,8 @@
 import express from 'express';
 import weatherController from '../controllers/weatherController';
 
-const router = express.Router();
+const publicRoute = express.Router();
 
 router.get("/weather", weatherController.getWeather);
 
-module.exports = router;
+export default publicRoute
