@@ -1,26 +1,13 @@
-const express = require("express");
-const axios = require("axios");
+import express from "express";
+import weatherRoutes from "./src/routes/weatherRoutes";
+
 const app = express();
 
+// Utilisation des routes
+app.use("/api", weatherRoutes);
 
-app.get("ather", async (req, res) => {
-    const city = req.query.city;
-    if (!city) {
-        return res.status(400).send("Le paramètre 'city' est requis.");
-    }
-
-    const URL_API = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
-
-    try {
-        const response = await axios.get(URL_API);
-        res.json(response.data); // Retourne les données JSON de l'API
-    } catch (error) {
-        if (error.response && error.response.status === 404) {
-            res.status(404).send("Ville introuvable.");
-        } else {
-            res.status(500).send("Problème avec l'API.");
-        }
-    }
+// Lancer le serveur
+const PORT = 3000;
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
 });
-
-app.listen(3000, () => console.log("Server running on http://localhost:3000"));
