@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+.node_modules
+.env
+=======
 # Logs
 logs
 *.log
@@ -34,3 +38,4 @@ temp/
 
 # Build files
 build/
+>>>>>>> e3f568b31dfb6848d367dac369e2cc74a5a57134

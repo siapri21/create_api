@@ -1,10 +1,10 @@
 import express from "express";
-import weatherRoutes from "./src/routes/weatherRoutes";
+import weatherRoutes from './src/routes/weatherRoutes.js';
 
 const app = express();
 
 // Utilisation des routes
-app.use("/api", weatherRoutes);
+// app.use("/api", router);
 
 // Lancer le serveur
 const PORT = 3000;
