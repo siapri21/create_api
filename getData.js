@@ -2,7 +2,7 @@ import express from "express";
 import axios from "axios";
 import fs from "fs";
 
-const API_KEY = "e1039b3fe7762e9d6738cbdc81e0a6bb";
+
 const BASE_URL = `https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=${API_KEY}`;
 
 // Création de l'application GetData pour récupérer la totalité des données de l'API

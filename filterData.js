@@ -1,7 +1,6 @@
 import express from "express"; 
 import axios from "axios";
 
-const API_KEY = "e1039b3fe7762e9d6738cbdc81e0a6bb"; // Remplacez par votre clé API OpenWeatherMap
 
 const filterData = express();
 
